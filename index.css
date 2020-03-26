@@ -1,0 +1,901 @@
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+
+/******CSS PRINCIPAL DEL MENU (JAIME)******/
+
+*{
+    margin: 0px; /*Elimina todos los margenes sobrantes*/
+    padding: 0px; /*Elimina todos los margenes sobrantes*/
+}
+
+.contenedor{
+    width: 1100px;
+    margin: auto;
+}
+main{
+    margin: 60px 0px;
+}
+
+/*FUENTE*/
+@font-face{
+    font-family:"Babylon";
+    src:url(Fuentes/Babylon.ttf);
+}
+.FUENTE{
+    font-size:;
+    font-family:"Babylon";
+    
+}
+h2{
+    font-size: 25px;
+}
+
+/*MENU*/
+header{
+    width: 100%;
+    top: 0px;
+    position: absolute;
+    
+}
+.homefondo{
+    background-image:url(IMG/fondo.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:100% 100%;
+    top: 60px;
+    
+}
+
+nav{
+    margin: 0px auto; /*Nos implementa un margen de 0px hacia arriba mientras que el auto nos centra nav*/
+    max-width:100%; /*Acota el ancho maximo del nav a 1000px*/    
+}
+
+nav ul{
+   list-style: none; /*Elimina los puntos que aparecen por defecto al crear la lista desordenada*/
+}
+
+nav > ul{ /*Todas las caracteristicas que implementemos dentro de este "nav > ul", solo se aplicaran para el "ul" principal (el que viene seguido del nav)*/
+    display: table; /*Hace que todos los elementos tengan un tamaño similar mostrandose en forma de tabla*/
+    overflow: hidden; /*Todas aquellas partes que sobresalgan desapareceran*/
+    width: 100%; /*Hace que la barra del "nav" abarque toda la pantalla (de izq a derch)*/
+    background-image: url(IMG/darkness.png);
+    position: relative; /*Establece que la posicion del menu desplegable sea relativa*/
+}
+
+nav > ul li{ /*Todas las caracteristicas que implementemos dentro de este "nav > ul li", solo se aplicaran para las listas "li" que se encuentren debajo del "ul" PRINCIPAL*/
+    display: table-cell; /*Hace que todos los elementos li cojan una posicion de tabla pero con celdas, de tal forma que todos los elementos mediran lo mismo*/ 
+    width: 25%;
+}
+
+nav > ul li a{
+    color: white; /*Implementa el color blanco en el HOME/GAMING... del "nav"*/
+    font-size: 20px;
+    display: block; /*Los bloqueamos creando una caja para que se queden fijos*/
+    line-height: 20px;
+    padding: 20px 0px;
+    position: relative; /*Establece que la posicion del menu desplegable sea relativa*/
+    transition-duration: 0.6s; /*Tiempo en seg que quiero que tarde en desplegarme el nav*/
+    text-align: center;
+    text-decoration: none; /*Elimina el subrayado del texto que aparece por defecto*/
+}
+
+nav > ul > li > a div{
+    background: #174459; /*Color azulado oscuro*/
+    display: block; /*Los bloqueamos creando una caja para que se queden fijos*/
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -53px;
+    transition-duration: 0.6s;
+}
+
+nav > ul > li > a div img{
+    padding-top: 14px
+}
+
+nav > ul > li > a:hover > div{
+    top: 0px;
+    position: absolute;
+    width: 100%
+}
+/*COLORES DE LAS DISTINTAS CAPAS*/
+.color_capa_1{
+    background: red;
+    width: 100%
+}
+.color_capa_2{
+    background: orange;
+    width: 100%
+}
+.color_capa_3{
+    background: green;
+    width: 100%
+}
+.color_capa_4{
+    background: blue;
+    width: 100%;
+}
+
+.tryit{
+    margin-top: 150px;
+    text-align:center;
+    color: black;
+    font-family: "Babylon";
+}
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+
+/***CSS PRINCIPAL DE LA PAGINA DE GAMING***/
+body{
+    background-image: url(IMG/ama.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+
+.colorgam {
+    margin: 83px 10px 30px;
+    text-align: center;
+    font-family: "babylon"
+}
+
+.galeria h1 {
+    text-align: center;
+    margin: 20px 0 15px 0;
+    font-weight: 300px;
+}
+
+.contenedor-imagenes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    background-color: black;
+}
+
+.contenedor-imagenes .imagen {
+    width: 32%;
+    height: 200px;
+    position: relative;
+    margin-bottom: 5px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75);
+    width: auto;
+    margin: 10px;
+    border-radius: 100px;
+}
+
+.imagen img {
+    will-change: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 100px;
+
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    opacity: 70%;
+    background: rgb(249, 184, 37);
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: 0.5s ease;
+    border-radius: 100px;
+}
+
+.overlay h2 {
+    color: white;
+    font-family: "Babylon";
+    font-weight: 300px;
+    font-size: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.imagen:hover .overlay {
+    height: 200px;
+    cursor: pointer;
+}
+
+.productosd{
+    text-align: center;
+    font-family: "babylon";
+    margin: 20px;
+}
+
+ul.slider {
+    position: relative;
+    /*Necesitamos que el ul sea relativo*/
+}
+
+.slider li {
+    opacity: 0;
+    /*Ocultamos todos los <li>*/
+    transition: opacity .5s;
+    position: absolute;
+    /*Posicionamos en absoluto los <li>*/
+    left: 0px;
+    top: 0px;
+    margin: 0px;
+    padding: 50px;
+    border: 2px solid rgb(249, 184, 37);
+    background: #fff;
+    width: 100%;
+    height: 300px;
+}
+
+ul.slider li:first-child {
+    opacity: 1;
+    /*Mostramos el primer <li>*/
+}
+
+ul.slider li:target {
+    opacity: 1;
+    /*Mostramos el <li> al que apunta el enlace*/
+}
+
+
+mcarrusel ul.slider {
+    padding: 0px;
+}
+
+.slider {
+    width: 100%;
+    height: 300px;
+    margin: 10px 0px;
+    list-style: none;
+}
+
+#slide1 {
+    background-image: url(IMG/mon2.png);
+    text-align: center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#slide2 {
+    background-image: url(IMG/mon4.png);
+    text-align: center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#slide3 {
+    background-image: url(IMG/mouse10.png);
+    text-align: center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#slide4 {
+    background-image: url(IMG/mouse4.png);
+    text-align: center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#slide5 {
+    background-image: url(IMG/tec5.png);
+    text-align: center;
+    background-size: contain;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.menucarrusel {
+    position: relative;
+    width: 100%;
+    background: #f1f2f3;
+    margin: 5px 0px 0px;
+    display: inline-block;
+}
+
+.menucarrusel li {
+    width: 20%;
+    padding: 0px;
+    display: inline-block;
+}
+
+.menucarrusel li a {
+    display: flex;
+    flex-wrap: wrap;
+    text-decoration: none;  
+    font-weight: bold;
+    color: black;
+    line-height: 1.8;
+    border-top: 5px solid rgb(249, 184, 37);
+    border-right: 1px solid rgb(249, 184, 37);
+    padding: 10px;
+    position: relative;
+    text-align: center;
+}
+
+.menucarrusel li:last-child a {
+    border-right: 0;
+}
+
+.menucarrusel a:hover {
+    background-color: rgb(249, 184, 37);
+    color: #fff;
+    border-top-color: rgb(255, 207, 100);
+    color: white;
+}
+
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+
+/******CSS PRINCIPAL DE LA PAGINA NOSOTROS******/
+
+/*Resetear el limitado de las propiedades*/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
+}
+
+/*Reseteo el limitado de propiedades*/
+body,h1,h2,h3,h4,h5,h6,p {
+  margin: 0px;
+}
+
+.image img {
+  opacity:;
+  width:100%;
+  position: relative;
+  text-align:center;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+/* Call for action para Comprar*/
+aside {
+  background-color:dimgray;
+  border-radius: 20px;
+  color: white;
+  padding: 10px;
+  position: absolute;
+  right: 15%;
+  text-align: center;
+  top: 30%;
+  width: 20%;
+}
+
+aside a {
+  background-color:darkseagreen;
+  border-radius: 10px;
+  color: white;
+  margin-top: 40px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+aside h3 {
+  margin: 20px 0px;
+}
+
+main:after {
+  background-color: white;
+  display: block;
+  content: " ";
+  height: 2px;
+  width: 30%;
+  margin: 0px auto;
+  margin-top: 30px;
+}
+
+/* Estilos para la zona de las cards */
+.cards {
+  overflow-y: auto;
+}
+.cards .card {
+  float: left;
+  padding: 20px;
+  text-align: center;
+  width: 33%;
+}
+
+.cards .card img {
+  width: 50%;
+}
+
+/* Sección con la botella y los tres párrafos descriptivos */
+.bottle {
+  margin: 30px auto;
+  overflow-y: auto;
+  width: 70%;
+}
+
+.bottle img {
+  float: left;
+  margin-left: 10%;
+  width: 20%;
+}
+
+.bottle div {
+  float: left;
+  margin-top: 20px;
+  text-align: justify;
+  width: 50%;
+}
+
+/* Mostrarmos la primera letra con un borde diferente */
+.bottle div::first-letter {
+  border-right: 1px solid #121867;
+  border-bottom: 1px solid #121867;
+  color: white;
+  font-size: 2em;
+  font-weight: bolder;
+  margin-right: ;
+  padding-right: 10px;
+}
+
+/* Estilos para la galería de imágenes */
+.gallery {
+  clear: both;
+  margin: 20px auto;
+  overflow-y: auto;
+  width: 70%;
+}
+
+.gallery img {
+  float: left;
+  width: 20%;   
+}
+
+.intro h1{
+    text-align: center;
+}
+
+.imagenn{
+    width:;
+}
+
+.fondonos{
+    background-image: url(IMG/fondnos2.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:100%;
+    background-attachment: fixed;
+}
+
+.colornos{
+    color:white;
+    font-family:"God";
+}
+
+@font-face{
+    font-family:"God";
+    src:url(Fuentes/God.ttf);
+}
+
+.fontnos{
+    color:white;
+    font-family:"God";
+    font-size: 25px;
+}
+/**Localizacion**/
+.localizacion {
+    text-align: center;
+}
+
+#where {
+    font-size: 40px;
+    color: white;
+    font-family: "babylon";
+    margin: 10px;
+}
+
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+
+/******CSS DEL FOOTER******/
+
+footer{
+  background-image: url(IMG/darkness.png);
+  clear: both;
+  color: white;
+  font-weight: bolder;
+  font-size: 0.8;
+  margin-top: 0px; /*10px*/
+  overflow-y: auto;
+  padding: 20px;
+}
+
+footer address {
+  float: left;
+  width: 20%;
+}
+
+footer div {
+  float: left;
+  text-align: center;
+  width: 60%;
+}
+
+footer section {
+  float: left;
+  text-align: center;
+  width: 10%;
+}
+
+.redes_sociales img{
+    width: 30%;
+    height: 30%;
+}
+
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+
+
+/******CSS PRINCIPAL DE LA PAGINA DE RATONES GAMING (JAIME)******/
+.contenedor_img_text {
+    margin: 0px 0px 0px 0px;
+    flex-wrap: wrap;
+    display: flex;
+    background-image: url(IMG/fondo_M_R_T.png);
+    padding: 50px 20px 20px 60px;
+}
+
+.cont_text {
+    font-size: 25px;
+    margin: 15px 20px ;
+    display: inline-table;
+    padding: 50px;
+}
+
+.img_text img {
+    width: 400px;
+    margin: 10px;
+    display: inline-table;
+}
+
+.img_logo img {
+    width: 110px;
+    margin: 125px 60px 10px 45px;
+    padding: 10px 10px 10px 10px;
+    display: inline-table;
+}
+
+.img_logo_2 img {
+    width: 178px;
+    margin: 110px 30px 10px 5px;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    display: block;
+}
+
+.img_logo_3 img {
+    width: 152px;
+    margin: 110px 35px 10px 22px;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    display: block;
+}
+
+.img_logo_4 img {
+    width: 170px;
+    margin: 120px 10px 10px 12px;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    display: block;
+}
+
+.img_logo_5 img {
+    width: 180px;
+    margin: 130px 10px 10px 12px;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    display: block;
+}
+@font-face{
+    font-family:"Gody";
+    src:url(Fuentes/Gody.ttf);
+}
+
+.fontnos{
+    color:white;
+    font-family:"Gody";
+    font-size: 30px;
+}
+.contenedor_principal_ratones{
+    margin-top: 60px;
+}
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+
+/******CSS PRINCIPAL DE LA PAGINA DE MONITORES GAMING (JAIME)******/
+
+.contenedor_img_text_monitores{
+    margin: 0px 0px 0px 0px;
+    flex-wrap: wrap;
+    display: flex;
+    background-image: url(IMG/fondo_M_R_T.png);
+    padding: 50px 20px 20px 60px;
+}
+.img_text_monitores{
+    float: left;
+    padding-bottom: 10px;
+}
+.cont_text_monitores{
+    font-size: 25px;
+    padding: 45px 100px 100px 30px;
+    margin-left: -80px;
+    margin-right: 290px;
+    display: block;
+}
+.img_text_monitores img{
+    width: 400px;
+    margin-left: 5px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}
+.img_logo_6_monitores img{
+    width: 192px;
+    margin: 110px 2px 10px 20px;
+    float: left;
+    padding: 10px 10px 10px 10px;
+}
+.img_logo_7_monitores img{
+    width: 148px; 
+    margin: 110px 35px 10px 35px;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    display: block;
+}
+.img_logo_8_monitores img{
+    width: 152px; 
+    margin: 90px 48px 10px 32px;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    display: block;
+}
+.img_logo_9_monitores img{
+    width: 170px; 
+    margin: 90px 28px 10px 22px;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    display: block;
+}
+.img_logo_10_monitores img{
+    width: 100px; 
+    margin: 110px 68px 10px 62px;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    display: block;
+}
+.fuente_Gody{
+    font-size:20px;
+    font-family:"Gody";
+}
+.contenedor_principal_monitores{
+    margin-top: 60px;
+}
+
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+
+/******CSS PRINCIPAL DE LA PAGINA DE TECLADOS GAMING (JAIME)******/
+
+.contenedor_img_text_teclados{
+    margin: 0px 0px 0px 0px;
+    flex-wrap: wrap;
+    display: flex;
+    background-image: url(IMG/fondo_M_R_T.png);
+    padding: 50px 20px 20px 60px;
+    
+}
+.img_text_teclados{
+    float: left;
+    padding-bottom: 20px;
+}
+.cont_text_teclados{
+    font-size: 25px;
+    padding: 45px 90px 100px 40px;
+    margin-left: -80px;
+    margin-right: 190px;
+    display: block;
+}
+.img_text_teclados img{
+    width: 400px;
+    margin-left: 5px;
+    margin-right: 100px;
+    margin-bottom: 20px;
+}
+.img_logo_6_teclados img{
+    width: 192px;
+    margin: 110px 2px 10px 20px;
+    float: left;
+    padding: 10px 10px 10px 10px;
+}
+.img_logo_7_teclados img{
+    width: 148px; 
+    margin: 120px 25px 10px 35PX;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    display: block;
+}
+.img_logo_8_teclados img{
+    width: 172px; 
+    margin: 145px 24px 10px 22px;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    display: block;
+}
+.img_logo_9_teclados img{
+    width: 150px; 
+    margin: 110px 60px 10px 22px;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    display: block;
+}
+.img_logo_10_teclados img{
+    width: 100px; 
+    margin: 125px 78px 10px 62px;
+    padding: 10px 10px 10px 10px;
+    float: left;
+    display: block;
+}
+.fuente_Gody{
+    font-size:20px;
+    font-family:"Gody";
+}
+.contenedor_principal_teclados{
+    margin-top: 60px;
+}
+/******CSS DE LOS FORMULARIOS********/
+.bodyformulario{
+    background-image: url(IMG/fondoformulario.jpg);
+    background-position: center;
+    font-family: 'Babybilon';
+}
+.formulario-registro{
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'Babybilon';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+.formulario-registro h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+.controlesregistro{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+.formulario-registro p {
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+}
+.formulario-registro a {
+    color: white;
+    text-decoration: none;
+}
+.formulario-registro a:hover {
+    color: white;
+    text-decoration: underline;
+}
+.formulario-registro .botonesregistro{
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+.formulario-login{
+    width: 400px;
+    height: 340px;
+    background: #24303c;
+    margin: auto;
+    margin-top: 180px;
+    box-shadow: 7px 13px 37px #000;
+    padding: 20px 30px;
+    border-top: 4px solid #017bab;
+    color: white;
+}
+.formulario-login h4{
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid;
+    font-size: 22px;
+}
+.controleslogin{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+.botoneslogin{
+    width: 100%;
+    height: 40px;
+    background: #1f53c5;
+    border: none;
+    color: white;
+    margin-bottom: 16px;
+}
+.formulario-login p{
+    height: 40px;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+.formulario-login a{
+    color: white;
+    text-decoration: none;
+    font-size: 14px
+}
+.form-login a:hover{
+    text-decoration: underline
+}
+
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+/*______________________________________________________________________________*/
+
+
+
+
+
+
+
+
